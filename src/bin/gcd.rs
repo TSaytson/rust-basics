@@ -1,6 +1,6 @@
 use std::io;
-mod inputs;
-use inputs::convert_to_int;
+mod helpers;
+use helpers::convert_to_u;
 
 fn main(){
 
@@ -10,8 +10,8 @@ fn main(){
   io::stdin().read_line(&mut input_num1).expect("Should be a number");
   println!("Enter the second number:");
   io::stdin().read_line(&mut input_num2).expect("Should be a number");
-  let mut num1 = convert_to_int(&input_num1);
-  let mut num2 = convert_to_int(&input_num2);
+  let mut num1 = convert_to_u(&input_num1);
+  let mut num2 = convert_to_u(&input_num2);
   #[allow(unused_assignments)]
   let mut rest: u128 = 0;
 
